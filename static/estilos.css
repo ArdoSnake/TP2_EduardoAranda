@@ -214,3 +214,14 @@ footer:hover {
 nav a:active {
     transform: scale(0.98);
 }
+
+/* ---------- ENLACES DE CONTACTO ---------- */
+footer a, section a {
+    color: #e8f5e9; /* blanco verdoso agradable */
+    text-decoration: none;
+}
+
+footer a:hover, section a:hover {
+    color: #2ecc71; /* verde principal al pasar el mouse */
+    text-decoration: underline;
+}
