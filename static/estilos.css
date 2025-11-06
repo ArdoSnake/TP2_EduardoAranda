@@ -88,10 +88,10 @@ h2 {
 
 /* ---------- TABLAS (AGRANDADA) ---------- */
 .tabla-miembros {
-    width: 90%;            /* ocupa más ancho */
-    max-width: 1100px;     /* límite superior */
-    margin: 20px auto;     /* centrado y espacio superior/inferior */
-    font-size: 1.05rem;    /* texto más grande */
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    font-size: 1.05rem;
     border-collapse: collapse;
     background-color: #243b2c;
     color: #e8f5e9;
@@ -99,7 +99,7 @@ h2 {
 
 .tabla-miembros th, .tabla-miembros td {
     border: 1px solid #2ecc71;
-    padding: 15px 20px;    /* celdas más grandes */
+    padding: 15px 20px;
     text-align: center;
 }
 
@@ -176,4 +176,49 @@ footer p {
     margin: 0;
     color: #d0ffd9;
     font-size: 0.9rem;
+}
+
+/* Animaciones suaves generales */
+* {
+    transition: all 0.4s ease-in-out;
+}
+
+/* Sombra y efecto hover en secciones */
+section:hover {
+    box-shadow: 0 6px 15px rgba(46, 204, 113, 0.5);
+}
+
+/* Efecto sutil en los botones ya existentes */
+.boton:active {
+    transform: scale(0.97);
+}
+
+/* Animaciones en tabla de miembros */
+.tabla-miembros tr {
+    transition: background-color 0.4s, transform 0.2s;
+}
+
+.tabla-miembros tr:hover {
+    transform: scale(1.01);
+}
+
+/* Animaciones en imágenes del equipo */
+.imagen-empleado {
+    animation: flotar 3s ease-in-out infinite alternate;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+/* Footer efecto hover */
+footer:hover {
+    background-color: #2e5939;
+}
+
+/* Navegación hover extra */
+nav a:active {
+    transform: scale(0.98);
 }
