@@ -1,56 +1,215 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Equipo - Cooperativa Innovar S.A.</title>
-    <link rel="stylesheet" href="static/estilos.css">
-</head>
-<body>
-    <header>
-        <h1>Nuestro Equipo</h1>
-        <nav>
-            <a href="index.html" class="boton">Inicio</a>
-            <a href="pagina 1.html" class="boton">Miembros</a>
-            <a href="pagina 2.html" class="boton">Equipo</a>
-        </nav>
-    </header>
+/* ---------- FUENTES ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap');
 
-    <main>
-        <section>
-            <h2>Equipo de Trabajo</h2>
-            <div class="equipo-container">
-                <div class="empleado">
-                    <img src="Imagenes/Empleado1.webp" alt="Empleado 1" class="imagen-empleado">
-                    <div class="nombre-empleado">Eduardo Aranda</div>
-                    <div class="cargo-empleado">Presidente</div>
-                </div>
-                <div class="empleado">
-                    <img src="Imagenes/Empleado2.webp" alt="Empleado 2" class="imagen-empleado">
-                    <div class="nombre-empleado">Néstor Rotela</div>
-                    <div class="cargo-empleado">Vicepresidente</div>
-                </div>
-                <div class="empleado">
-                    <img src="Imagenes/Empleado3.webp" alt="Empleado 3" class="imagen-empleado">
-                    <div class="nombre-empleado">Marcos Cristaldo</div>
-                    <div class="cargo-empleado">Gerente de Proyectos</div>
-                </div>
-                <div class="empleado">
-                    <img src="Imagenes/Empleado4.webp" alt="Empleado 4" class="imagen-empleado">
-                    <div class="nombre-empleado">Mariana Gómez</div>
-                    <div class="cargo-empleado">Contadora</div>
-                </div>
-                <div class="empleado">
-                    <img src="Imagenes/Empleado5.webp" alt="Empleado 5" class="imagen-empleado">
-                    <div class="nombre-empleado">Fernando Enciso</div>
-                    <div class="cargo-empleado">Supervisor Técnico</div>
-                </div>
-            </div>
-        </section>
-    </main>
+/* ---------- BASE ---------- */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f1e16;
+    color: #e8f5e9;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-    <footer>
-        <p>&copy; 2025 - Eduardo Aranda | Cooperativa Innovar S.A.</p>
-    </footer>
-</body>
-</html
+header {
+    background-color: #1b3b2a;
+    color: #dfffe0;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid #2ecc71;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 1px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #e8f5e9;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #2e5939;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+    color: #0f1e16;
+}
+
+/* ---------- MAIN ---------- */
+main {
+    flex: 1;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #1a2d22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #2ecc71;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 15px;
+}
+
+/* ---------- BOTONES ---------- */
+.boton {
+    text-decoration: none;
+    background-color: #2e5939;
+    color: #e8f5e9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #2ecc71;
+    color: #0f1e16;
+    transform: scale(1.05);
+}
+
+/* ---------- TABLAS (AGRANDADA) ---------- */
+.tabla-miembros {
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
+    font-size: 1.05rem;
+    border-collapse: collapse;
+    background-color: #243b2c;
+    color: #e8f5e9;
+}
+
+.tabla-miembros th, .tabla-miembros td {
+    border: 1px solid #2ecc71;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.tabla-miembros th {
+    background-color: #2e5939;
+}
+
+.tabla-miembros tr:nth-child(even) {
+    background-color: #1f3527;
+}
+
+.tabla-miembros tr:hover {
+    background-color: #2ecc71;
+    color: #0f1e16;
+    transition: 0.3s;
+}
+
+/* ---------- EQUIPO ---------- */
+.equipo-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.empleado {
+    text-align: center;
+    background-color: #1a2d22;
+    border-radius: 10px;
+    padding: 15px;
+    width: 180px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.empleado:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(46, 204, 113, 0.6);
+}
+
+.imagen-empleado {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #2ecc71;
+    transition: transform 0.3s ease;
+}
+
+/* --- ANIMACIÓN SOLO AL HOVER --- */
+.imagen-empleado:hover {
+    transform: translateY(-10px) scale(1.05) rotate(2deg);
+}
+
+.nombre-empleado {
+    font-weight: bold;
+    color: #2ecc71;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.cargo-empleado {
+    font-size: 0.9rem;
+    color: #d0ffd9;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    background-color: #1b3b2a;
+    padding: 20px;
+    border-top: 3px solid #2ecc71;
+}
+
+footer p {
+    margin: 0;
+    color: #d0ffd9;
+    font-size: 0.9rem;
+}
+
+/* Animaciones suaves generales */
+* {
+    transition: all 0.4s ease-in-out;
+}
+
+/* Sombra y efecto hover en secciones */
+section:hover {
+    box-shadow: 0 6px 15px rgba(46, 204, 113, 0.5);
+}
+
+/* Efecto sutil en los botones ya existentes */
+.boton:active {
+    transform: scale(0.97);
+}
+
+/* Animaciones en tabla de miembros */
+.tabla-miembros tr {
+    transition: background-color 0.4s, transform 0.2s;
+}
+
+.tabla-miembros tr:hover {
+    transform: scale(1.01);
+}
+
+/* Footer efecto hover */
+footer:hover {
+    background-color: #2e5939;
+}
+
+/* Navegación hover extra */
+nav a:active {
+    transform: scale(0.98);
+}
+
